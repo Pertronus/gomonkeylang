@@ -20,6 +20,8 @@ const (
 	BANG      = "!"
 	LT        = "<"
 	GT        = ">"
+	EQ        = "="
+	NOT_EQ    = "!="
 	COMMA     = "," // Delimiters
 	SEMICOLON = ";"
 	LPARAN    = "(" // Braces
