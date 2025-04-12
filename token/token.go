@@ -18,6 +18,8 @@ const (
 	DIVIDE    = "/"
 	ASTERISK  = "*"
 	BANG      = "!"
+	LT        = "<"
+	GT        = ">"
 	COMMA     = "," // Delimiters
 	SEMICOLON = ";"
 	LPARAN    = "(" // Braces
@@ -26,13 +28,21 @@ const (
 	RBRACE    = "}"
 	FUNCTION  = "FUNCTION" // Keywords
 	LET       = "LET"
-	LT        = "<"
-	GT        = ">"
+	IF        = "IF"
+	ELSE      = "ELSE"
+	RETURN    = "RETURN"
+	TRUE      = "TRUE"
+	FALSE     = "FALSE"
 )
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"fn":     FUNCTION,
+	"let":    LET,
+	"if":     IF,
+	"else":   ELSE,
+	"true":   TRUE,
+	"false":  FALSE,
+	"return": RETURN,
 }
 
 func LookupIndent(indent string) TokenType {
